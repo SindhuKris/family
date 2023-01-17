@@ -1,6 +1,45 @@
-  <div class = "app">
-    <header>
-      <h1> Todo List </h1>
-    </header>
-    <app-todo></app-todo>
+<div class = "body">
+  <header>
+    <h1>
+      <span class="title">Family</span>
+    </h1>
+  </header> 
+  
+  <div>
+    <button class="parent"(click)="getShowType('parent')"> Parent
+    </button>
+    <button class="sister"(click)="getShowType('sister')"> Sister
+    </button>
+    <button class="brother"(click)="getShowType('brother')"> Brother
+    </button>
+    
   </div>
+
+  <div class="list">
+    <div *ngIf="ShowType=='parent'" class="listparent">
+      <div *ngFor="let parent of parents">
+        {{parent.name}}    
+      </div>
+    </div>
+
+    <div *ngIf="ShowType=='sister'" class="listsister">
+      <div *ngFor="let sister of sisters">
+        {{sister.name}}    
+      </div>
+    </div>
+
+    <div *ngIf="ShowType=='brother'" class="listbrother">
+      <div *ngFor="let brother of brothers">
+        {{brother.name}}    
+      </div>
+    </div>
+
+    
+
+
+  </div>
+
+</div>  
+
+
+
