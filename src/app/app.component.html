@@ -1,3 +1,4 @@
+
 <div class = "body">
   <header>
     <h1>
@@ -6,13 +7,16 @@
   </header> 
   
   <div>
-    <button class="parent"(click)="getShowType('parent')"> Parent
+    <button class="parent" (click)="getShowType('parent')"> Parent
     </button>
-    <button class="sister"(click)="getShowType('sister')"> Sister
+    <button class="sister" (click)="getShowType('sister')"> Sister
     </button>
     <button class="brother"(click)="getShowType('brother')"> Brother
     </button>
-    
+    <button class="all" (click)="getShowType('all')"> All
+    </button>
+    <button class="form"[routerLink]="['/form']">Form
+    </button>
   </div>
 
   <div class="list">
@@ -34,12 +38,17 @@
       </div>
     </div>
 
-    
+    <div *ngIf="ShowType=='all'" class="listall">
+      <div *ngFor="let p of all">
+        {{p.name}}    
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
 
 
   </div>
 
 </div>  
-
 
 

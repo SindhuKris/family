@@ -66,6 +66,20 @@
         }
     }
 
+    .form{
+        background-color: brown;
+        border-radius: 10px;
+        padding: 0 25px;
+        margin: 0 25px;
+        font-family: 'Times New Roman', Times, serif;
+        box-shadow: 5px;
+        cursor: pointer;
+        
+        &:hover{
+            background-color:orangered;
+        }
+    }
+
     .list{
         display: flex;
         flex-direction: column;
@@ -79,7 +93,9 @@
         .listbrother{
             margin-left: 320px;
         }
-        
+        .listall{
+            margin-left: 450px;
+        }
     }
      
 
