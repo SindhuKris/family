@@ -1,7 +1,7 @@
 
 <body>
     <div class="title">
-        <form action="results.html" method="Get" enctype="multipart/form-data">
+        <!-- <form action="results.html" method="Get" enctype="multipart/form-data">
             <div>
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" required>
@@ -24,6 +24,8 @@
             </div>
             <div>
                 Favourite Food
+
+                
                 <div>
                     <label for="banana">Banana</label>
                     <input type="checkbox" name="banana" id="banana">
@@ -48,6 +50,31 @@
                 </div>
             </div>
             
+         </form> -->
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+
+            <div class="form-field">
+                <label>Name</label>
+                <input formControlName="name" type="text">
+            </div>
+
+            <div class="form-field">
+                <label>Email</label>
+                <input formControlName="email" type="text">
+            </div>
+
+            <div class="form-field">
+                <label>Password</label>
+                <input formControlName="password" type="password">
+            </div>
+
+            <div class="form-field">
+                <label>Confirm password</label>
+                <input formControlName="confirm_password" type="password">
+            </div>
+
+
         </form>
     </div>    
 </body>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, MinLengthValidator, Validators } from '@angular/forms';
 
 
 
