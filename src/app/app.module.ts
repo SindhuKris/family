@@ -16,7 +16,7 @@ const route:Routes =[
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
 
   imports: [

@@ -1,62 +1,18 @@
 
 <body>
-    <div class="title">
-        <!-- <form action="results.html" method="Get" enctype="multipart/form-data">
-            <div>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <div>
-                <label for="age">Age</label>
-                <input type="number" name="age" id="age" min="1" max="70" step="1">
-            </div>
-            <div>
-                <label for="date">Birthdate</label>
-                <input type="date" name="date" id="date" min="2010-01-01">
-            </div>
-            <div>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div>
-                Favourite Food
+    <div class="form">
+       <h2 id="Registration">Registration Form</h2> 
 
-                
-                <div>
-                    <label for="banana">Banana</label>
-                    <input type="checkbox" name="banana" id="banana">
-            
-                </div>
-                <div>
-                    <label for="apple">Apple</label>
-                    <input type="checkbox" name="apple" id="apple" required>
-            
-                </div>
-            </div>
-            <div>
-                Gender
-                <div>
-                    <label for="male">Male</label>
-                    <input type="radio" name="gender" id="name" required>
-                </div>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required>
-            
-                </div>
-            </div>
-            
-         </form> -->
-
-        <form [formGroup]="form" (ngSubmit)="submit()">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
             <div class="form-field">
-                <label>Name</label>
-                <input formControlName="name" type="text">
+                <label>First Name</label>
+                <input formControlName="firstname" type="text">
+            </div>
+
+            <div class="form-field">
+                <label for="lastname">Last Name</label>
+                <input formControlName="lastname" id="lastname" type="text">
             </div>
 
             <div class="form-field">
@@ -70,9 +26,23 @@
             </div>
 
             <div class="form-field">
-                <label>Confirm password</label>
-                <input formControlName="confirm_password" type="password">
+                <label>Confirm Password</label>
+                <input formControlName="confirmPassword" type="password">
             </div>
+
+            <div class="form-field">
+                <label>Accept Terms & Conditions</label>
+                <input formControlName="acceptTerms" type="checkbox">
+            </div>
+
+            <div class="form-field">
+                <button type="submit" class="register">Register</button>
+                <button class="reset" type="reset" (click)="onReset()">Cancel</button>
+            </div>
+ 
+            
+            
+
 
 
         </form>

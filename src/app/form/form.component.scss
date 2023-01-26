@@ -1,4 +1,39 @@
-.title{
-    border: 1px solid;
-    padding: 1px;
+
+input[type=text], [type=email],[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button{
+    border-radius: 10px;
+    padding: 0 25px;
+    margin: 0 25px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px;
+    cursor: pointer;
+    background: green;
+    
+    &:hover{
+        background-color:orangered;
+    }
+
+    &[type=submit] {
+        background-color: brown;
+    }
+}
+
+
+
+
+.form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 420px;
+    margin:10 auto;
 }

@@ -2,53 +2,21 @@
 <div class = "body">
   <header>
     <h1>
-      <span class="title">Family</span>
+      <span class="title"></span>
     </h1>
   </header> 
   
   <div>
-    <button class="parent" (click)="getShowType('parent')"> Parent
-    </button>
-    <button class="sister" (click)="getShowType('sister')"> Sister
-    </button>
-    <button class="brother"(click)="getShowType('brother')"> Brother
-    </button>
-    <button class="all" (click)="getShowType('all')"> All
-    </button>
-    <button class="form" routerLink="form">Form
+    <button class="form" routerLink="form">Registration Form
     </button>
   </div>
 
-  <div class="list">
-    <div *ngIf="ShowType=='parent'" class="listparent">
-      <div *ngFor="let parent of parents">
-        {{parent.name}}    
-      </div>
-    </div>
-
-    <div *ngIf="ShowType=='sister'" class="listsister">
-      <div *ngFor="let sister of sisters">
-        {{sister.name}}    
-      </div>
-    </div>
-
-    <div *ngIf="ShowType=='brother'" class="listbrother">
-      <div *ngFor="let brother of brothers">
-        {{brother.name}}    
-      </div>
-    </div>
-
-    <div *ngIf="ShowType=='all'" class="listall">
-      <div *ngFor="let p of all">
-        {{p.name}}    
-      </div>
-    </div>
 
     
 
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
-  </div>
+
 
 </div>  
 
