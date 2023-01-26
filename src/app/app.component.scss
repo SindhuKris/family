@@ -3,68 +3,8 @@
     header{
         margin:10px;
 
-        .title{
-            background-color: goldenrod;
-            border:1px solid;
-            border-radius: 25px;
-            padding: 0 25px;
-            margin: 0 25px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
     }
-    .parent{
-        background-color: brown;
-        border-radius: 10px;
-        padding: 0 25px;
-        margin: 0 25px;
-        font-family: 'Times New Roman', Times, serif;
-        box-shadow: 5px;
-        cursor: pointer;
-        
-        &:hover{
-            background-color:orangered;
-        }
-    }
-    .sister{
-        background-color: brown;
-        border-radius: 10px;
-        padding: 0 25px;
-        margin: 0 25px;
-        font-family: 'Times New Roman', Times, serif;
-        box-shadow: 5px;
-        cursor: pointer;
-        
-       &:hover{
-            background-color:orangered;
-        }
-    }
-    .brother{
-        background-color: brown;
-        border-radius: 10px;
-        padding: 0 25px;
-        margin: 0 25px;
-        font-family: 'Times New Roman', Times, serif;
-        box-shadow: 5px;
-        cursor: pointer;
-        
-        &:hover{
-            background-color:orangered;
-        }
-    }
-
-    .all{
-        background-color: brown;
-        border-radius: 10px;
-        padding: 0 25px;
-        margin: 0 25px;
-        font-family: 'Times New Roman', Times, serif;
-        box-shadow: 5px;
-        cursor: pointer;
-        
-        &:hover{
-            background-color:orangered;
-        }
-    }
+    
 
     .form{
         background-color: brown;
