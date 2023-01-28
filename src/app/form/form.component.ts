@@ -1,18 +1,20 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit, OnChanges {
+export class FormComponent implements OnInit {
 
   form!: FormGroup;
   submitted = false;
 
   constructor(
     public fc:FormBuilder,
+    public router: Router
   ){
     
   }
@@ -29,18 +31,13 @@ export class FormComponent implements OnInit, OnChanges {
     });
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('eee')
-  }
-
-  onSubmit(){
-
-   this.submitted = true;
-  }
-
-  onReset() {
-    this.submitted = false;
-    this.form.reset();
-}
   
+  
+
+  Submit(){
+   this.submitted = true;
+   this.router.navigate(['/login'])
+  }
+
+ 
 }

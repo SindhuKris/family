@@ -3,7 +3,7 @@
     <div class="form">
        <h2 id="Registration">Registration Form</h2> 
 
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <form [formGroup]="form" (ngSubmit)="Submit()">
 
             <div class="form-field">
                 <label>First Name</label>
@@ -36,14 +36,13 @@
             </div>
 
             <div class="form-field">
-                <button type="submit" class="register">Register</button>
-                <button class="reset" type="reset" (click)="onReset()">Cancel</button>
+                <button type="submit" class="register" >Register</button>
+                <button class="login" routerLink="login">Login</button>
             </div>
  
+            <router-outlet></router-outlet>
             
-            
-
-
+           
 
         </form>
     </div>    
