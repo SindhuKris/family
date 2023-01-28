@@ -4,19 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { FormModule } from './form/form.module';
 
 const route:Routes =[
   {
     path:'form',
-     loadChildren: () => import('./form/form.module').then(m => m.FormModule)
-
-  }
+    loadChildren: () => import('./form/form.module').then(m => m.FormModule)
+  },
+  {
+    path:'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
 
   imports: [
